@@ -1,0 +1,104 @@
+{
+    "name": "InputController",
+    "maps": [
+        {
+            "name": "PlayerMovement",
+            "id": "70e1b8b2-b78a-421a-a8e4-7a9cd3eedfd6",
+            "actions": [
+                {
+                    "name": "OnPointerDown",
+                    "type": "Button",
+                    "id": "6a2cdfcc-f6de-4d73-82ec-a6d0750ba4cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "OnPointerUp",
+                    "type": "Button",
+                    "id": "29035e08-ed84-42ea-8520-fa677c1fba78",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
+                },
+                {
+                    "name": "PointerDeltaPosition",
+                    "type": "Value",
+                    "id": "a2abfc77-1be1-4cd5-addc-902425fa3fed",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d4949438-d840-466a-97f4-6442b1eabb33",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnPointerDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "38ba512e-ac78-4ce4-8c75-303c77a53c68",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnPointerDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6bc00431-cf8d-48ce-9769-0776c9a2d7ec",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerDeltaPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22d956f7-5202-4e1d-b3b3-2259755ae548",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerDeltaPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7700eb7a-2583-4ff2-9b3e-f25b06143adf",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnPointerUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6de0c882-06c9-4ba7-b93b-3ed1c1d5fa3b",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnPointerUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
