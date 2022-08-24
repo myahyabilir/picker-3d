@@ -274,11 +274,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8885093191335739549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b338454f09d533419863db1ed722eff, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b06e395100bc5541af3d17791c6e4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8885093191747278439}
-  minimumCountToPass: 1
 --- !u!1 &8885093191350307375
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8885093191350307372}
   - component: {fileID: 8885093191350307373}
+  - component: {fileID: 2764533388828201190}
   m_Layer: 0
   m_Name: Gates
   m_TagString: Untagged
@@ -323,9 +323,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 8885093191350307375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb85b601e33ba64db7704536b54d53d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11cb671f6827d1e4b87590aa5bd834a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collidingWithPlayer: 0
+--- !u!65 &2764533388828201190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8885093191350307375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.713618, y: 1, z: 9.994522}
+  m_Center: {x: 4.6814523, y: -9.46, z: -4.497261}
 --- !u!1 &8885093191480378199
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +815,7 @@ GameObject:
   - component: {fileID: 8885093192353496087}
   - component: {fileID: 8885093192353496084}
   - component: {fileID: 8885093192353496085}
+  - component: {fileID: 4987477363500424392}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -932,11 +947,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 8885093192353496093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9884a690785a91942a5d9f305bfab262, type: 3}
+  m_Script: {fileID: 11500000, guid: e4985d7cb142be248b0dc694a949e6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stopPoint: {fileID: 8885093191623192843}
   floorMaterial: {fileID: 2100000, guid: ce8eee1e618593640a8800e3299824dd, type: 2}
+--- !u!114 &4987477363500424392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8885093192353496093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e60e07298852242b5eff4bcabc3376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8885093191747278439}
+  minimumCountToPass: 0
+  basketNumber: 0
 --- !u!1 &8885093192570515579
 GameObject:
   m_ObjectHideFlags: 0

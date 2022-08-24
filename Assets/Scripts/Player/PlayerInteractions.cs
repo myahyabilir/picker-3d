@@ -39,6 +39,7 @@ public class PlayerInteractions : MonoBehaviour
         if (other.gameObject.CompareTag("CollectorActivator"))
         {
             Events.onCollectorsActivated?.Invoke(true);
+            other.gameObject.SetActive(false);
         }
     }
 

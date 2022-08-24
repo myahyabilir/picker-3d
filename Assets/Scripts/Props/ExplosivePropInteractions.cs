@@ -35,7 +35,7 @@ public class ExplosivePropInteractions : MonoBehaviour
             _meshRenderer.enabled = false;
             _sphereCollider.enabled = false;
             Invoke(nameof(DestroyGameObject), 0.2f);
-            PoolController.Instance.SpawnFromPool("SphereGroup", transform.position, Quaternion.identity);
+            PoolController.Instance.SpawnFromPool("SpherePropGroup", transform.position, Quaternion.identity);
             Invoke(nameof(Explode), 0.01f);
         }
     }

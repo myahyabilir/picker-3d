@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2700904569037030377}
   m_Layer: 0
   m_Name: ExplosiveProp
-  m_TagString: Untagged
+  m_TagString: ExplosiveProp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2700904569037030383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdd3bbd8d881db34ebe28e66037d5357, type: 3}
+  m_Script: {fileID: 11500000, guid: f425491c66b500a41828def358810b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

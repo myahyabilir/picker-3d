@@ -6,6 +6,7 @@ using UnityEngine;
 public class GatesAnimations : MonoBehaviour
 {
     private Animator[] _animators;
+    public bool collidingWithPlayer;
 
     private void OnEnable()
     {
@@ -24,9 +25,18 @@ public class GatesAnimations : MonoBehaviour
 
     private void OpenGates()
     {
+        if (!collidingWithPlayer) return;
         foreach (var animator in _animators)
         {
             animator.Play("OpenUp");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            collidingWithPlayer = true;
         }
     }
 }

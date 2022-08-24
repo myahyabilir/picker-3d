@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class BasketBottomPartInteractions : MonoBehaviour
@@ -10,7 +11,7 @@ public class BasketBottomPartInteractions : MonoBehaviour
     private List<GameObject> propsToBeEnter ;
     private int enteredPropsCount = 0;
     [SerializeField] private TextMeshPro text;
-    [SerializeField] private int minimumCountToPass;
+    private int minimumCount;
     
     
     private void OnEnable()
@@ -26,6 +27,7 @@ public class BasketBottomPartInteractions : MonoBehaviour
     private void Awake()
     {
         _transform = transform;
+        
     }
 
     private void Start()
@@ -57,7 +59,7 @@ public class BasketBottomPartInteractions : MonoBehaviour
 
     private IEnumerator EndOrContinueLevel()
     {
-        if (enteredPropsCount >= minimumCountToPass)
+        if (enteredPropsCount >= minimumCount)
         {
             yield return new WaitForSeconds(1f);
             Events.onNecessaryNumberOfPropsEnteredToBasket?.Invoke(_transform.parent);
@@ -68,6 +70,6 @@ public class BasketBottomPartInteractions : MonoBehaviour
 
     private void UpdateUI()
     {
-        text.text = enteredPropsCount + "/" + minimumCountToPass;
+        text.text = enteredPropsCount + "/" + GetComponentInParent<BasketUI>().minimumCountToPass;;
     }
 }

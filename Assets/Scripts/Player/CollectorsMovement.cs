@@ -12,19 +12,26 @@ public class CollectorsMovement : MonoBehaviour
     private void OnEnable()
     {
         Events.onCollectorsActivated += ActivateOrDeactivateCollectors;
-        
+        Events.onPlayerReachedStopPoint += DisableCollectors;
+
     }
     private void OnDisable()
     {
         Events.onCollectorsActivated -= ActivateOrDeactivateCollectors;
+        Events.onPlayerReachedStopPoint -= DisableCollectors;
+    }
+
+    private void DisableCollectors(List<GameObject> list)
+    {
+        rightOne.gameObject.SetActive(false);
+        leftOne.gameObject.SetActive(false);
     }
 
     private void ActivateOrDeactivateCollectors(bool shouldActivate)
     {
         if (!shouldActivate)
         {
-            rightOne.gameObject.SetActive(false);
-            leftOne.gameObject.SetActive(false);
+            DisableCollectors(null);
             StopCoroutine($"RotateObject");
             return;
         }

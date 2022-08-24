@@ -468,7 +468,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 791314245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1aca8b5b2abc7145974afd3cc9904d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a53d6f1974e26439702484c2054fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rightOne: {fileID: 1614569834}
@@ -609,11 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8be8d233faff8542877bfa8465b60ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools:
-  - tag: SphereGroup
-    prefab: {fileID: 965060044576691441, guid: d58e7f90050995842beb81a4436aab5f, type: 3}
-    count: 10
-    parent: {fileID: 1056940329}
 --- !u!1 &1267385532
 GameObject:
   m_ObjectHideFlags: 0
