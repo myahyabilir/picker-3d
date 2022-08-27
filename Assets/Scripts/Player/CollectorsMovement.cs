@@ -8,6 +8,8 @@ public class CollectorsMovement : MonoBehaviour
 {
     [SerializeField] private Transform rightOne;
     [SerializeField] private Transform leftOne;
+    private Coroutine leftCoroutine;
+    private Coroutine rightCoroutine;
     
     private void OnEnable()
     {
@@ -24,7 +26,7 @@ public class CollectorsMovement : MonoBehaviour
     private void DisableCollectors(List<GameObject> list)
     {
         rightOne.gameObject.SetActive(false);
-        leftOne.gameObject.SetActive(false);
+
     }
 
     private void ActivateOrDeactivateCollectors(bool shouldActivate)
@@ -40,6 +42,8 @@ public class CollectorsMovement : MonoBehaviour
 
         
         StartCoroutine(RotateObject(rightOne, -1));
+        if(leftCoroutine == null) leftOne.gameObject.SetActive(false);
+
         StartCoroutine(RotateObject(leftOne, 1));
 
     }
